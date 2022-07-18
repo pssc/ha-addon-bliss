@@ -1,0 +1,66 @@
+{
+  "name": "Bliss(non-free) Unofficial installer",
+  "version": "0.0.1",
+  "slug": "bliss",
+  "description": "Installer for bliss into a HA addon, Bliss Makes your music library more browsable, searchable, playable and beautiful, whichever music players you use see [blisshq](https://www.blisshq.com/)",
+  "url": "https://github.com/pssc/ha-addon-bliss/",
+  "webui": "http://[HOST]:[PORT:3220]/",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "stdin": false,
+  "ports": {
+    "3220/tcp": 3220
+  },
+  "ports_description": {
+    "3220/tcp": "Web Access"
+  },
+  "timeout": 180,
+  "map": [
+      "config:rw",
+      "share:rw",
+      "backup:rw",
+      "media:rw"
+  ],
+  "tmpfs": true,
+  "hassio_api": false,
+  "udev":true,
+  "full_access": true,
+  "apparmor": false,
+  "homeassistant_api": false,
+  "privileged": [ "SYS_ADMIN" ,"DAC_READ_SEARCH"],
+  "host_network": false,
+  "backup_exclude": [ "/data/music", "/data/mount", "/data/mnt" ],
+  "ingress": false,
+  "ingress_port": 0,
+  "panel_icon": "mdi:music-book",
+  "panel_title": "Bliss",
+  "stage": "experimental",
+  "options": {
+	  "links": [],
+          "mounts": [],
+          "dirs": [],
+	  "init_commands": [],
+	  "packages": []
+  },
+  "schema": {
+    "ssl": "bool?",
+    "certfile": "str?",
+    "keyfile": "str?",
+    "tmpfs": "bool?",
+    "mount": "str?",
+    "options":"str?",
+    "logdir":"str?",
+    "logfile":"str?",
+    "prefs":"str?",
+    "cache":"str?",
+    "plugs":"str?",
+    "saved":"bool?",
+    "links": [ { "link": "str", "dest": "str" } ],
+    "mounts": ["str?"],
+    "dirs": ["str?"],
+    "init_commands": ["str?"],
+    "packages": ["str?"],
+    "eula": "bool?"
+  }
+}
