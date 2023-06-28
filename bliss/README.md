@@ -1,6 +1,10 @@
-A complete unofficial and easy way to download, install and run the bliss application in home assiantant, Please read and agree to the EULA before continuing.
+# Bliss - Elsten Software Limited
 
-# EULA for Bliss
+Bliss Makes your music library more browsable, searchable, playable and beautiful, whichever music players you use. See the [Bliss website](http://www.blisshq.com).
+
+Please read and agree to the EULA before continuing.
+
+## EULA for Bliss
 To be frank, we have better things to do than write long winded license agreements that no-one reads. We'd rather just concentrate on writing great software to make your digital music life easier. This license basically just
 states that you have the right to use the software, but also sets out what you are not allowed to do. You know, stuff like distributing it elsewhere, renting it out, etc etc. However, our legal people said we HAD to show you
 this, so here goes... If you're the type of person that enjoys reading license agreements, you are in for a treat...
@@ -30,12 +34,10 @@ provided in the documentation.
  advised of the possibility of such damages.  Because some states/countries do not allow the exclusion or limitation of liability for consequential or incidental damages, the above limitation may not apply to you.
 11.  Indemnification By You.  If you distribute the Software in violation of this Agreement, you agree to indemnify, hold harmless and defend elsten software and its suppliers from and against any claims or lawsuits, including attorney's fees that arise or result from the use or distribution of the Software in violation of this Agreement.
 
-elsten software limited
-(http://www.blisshq.com).
-Set the EULA option to true for the addon to run.
+**Set the EULA option to true for the addon to run.**
 
 # Addon
-Flexible disk layout options.
+A complete unofficial and easy way to download, install and run the bliss application in home assiantant.
 
 * Flexible disk layout options (WIP, NFS, dirs, links are available)
 * *Most certainly* doesn't mine bitcoin on your home automation server.  Definitely no.
