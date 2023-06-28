@@ -1,12 +1,13 @@
 {
   "name": "Bliss(non-free) Unofficial installer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "slug": "bliss",
-  "description": "Installer for bliss into a HA addon, Bliss Makes your music library more browsable, searchable, playable and beautiful, whichever music players you use see [blisshq](https://www.blisshq.com/)",
+  "description": "Installer for bliss into a HA addon, Bliss Makes your music library more browsable, searchable, playable and beautiful, whichever music players you use.",
   "url": "https://github.com/pssc/ha-addon-bliss/",
   "webui": "http://[HOST]:[PORT:3220]/",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
+  "init": false,
   "boot": "auto",
   "stdin": false,
   "ports": {

@@ -1,10 +1,10 @@
-## [0.0.16] 2020-05-17
+## [0.0.2] 2023-06-26
 ### Added
 - Change log ;-)
 
 ### Changes
-- Lots
+- Upgrade to bookworm
 
 ### Fixes
-- Lots
+- N/A
 
