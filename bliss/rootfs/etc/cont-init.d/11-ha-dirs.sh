@@ -9,7 +9,7 @@ COMMAND="mkhadir"
 
 function mkhadir {
   V=$1
-  mkdir -p "${V}"
+  mkdir -p "${V}" || true
   chown ${HA_USER:-"root"}:${HA_GROUP:-"root"} "${V}"
   chmod ${HA_DIRS_MODE:-"g+rws"} "${V}"
   echo mkhadir "${V}"
@@ -25,5 +25,7 @@ if [ -r "${CONFIG}" ];then
 fi
 
 for i in ${HA_DIRS};do
-  ${COMMAND} "${i}"
+#  if [ ! -r "${i}" ];then
+     ${COMMAND} "${i}"
+#  fi
 done

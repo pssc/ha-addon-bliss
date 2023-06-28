@@ -3,6 +3,7 @@
 
 # Needs exec perms
 bashio::log.info "Finish Blissing"
+CFG="/config/addons_config/bliss"
 
 # For testing reinstall
 if [ -r /config/bliss/reinstall ];then
@@ -12,19 +13,20 @@ fi
 
 # application config
 
-# Save userprefs.
 mkdir -p /data/bliss/userprefs/
 if [ -r /config/.java/.userPrefs/com/elsten/bliss ];then
    bashio::log.debug "copy Bliss user prefs"
    rsync -art /config/.java/.userPrefs/com/elsten/bliss /data/bliss/userprefs/
 fi
 
+if [ -r /data/bliss/application/settings ];then
+  bashio::log.debug "copy Bliss app prefs"
+  rsync -art /data/bliss/application/settings ${CFG}/settings
+fi
+
 # on debug?
 bashio::log.info "Finish Bliss"
-touch /config/bliss/finish
+touch ${CFG}/finish
 bashio::log.info "Finish Blissing End"
 exit 0
 
-# /config/bliss/application/code/
-# Clean based on current-version
-# iterate check current and older than ... 6months?

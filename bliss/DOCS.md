@@ -20,7 +20,7 @@ The add-on can be tweaked to your liking. This section
 describes each of the add-on configuration options.
 
 default locations
- - /config/bliss
+ - /config/addon_config/bliss
 
 Example basic config:-
 

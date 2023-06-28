@@ -1,7 +1,7 @@
-ARG BUILD_FROM=hassioaddons/debian-base:5.2.3
+ARG BUILD_FROM=hassioaddons/debian-base:latest
 FROM ${BUILD_FROM}
 ARG target_uid=1000
-ARG url="https://www.blisshq.com/downloads/bliss-install-20220118.jar?20220118&filename=downloads/bliss-install-20220118.jar" 
+ARG url="https://www.blisshq.com/downloads/bliss-install-20230606.jar?20230606&filename=downloads/bliss-install-20230606.jar"
 ARG debug=false
 
 ARG BUILD_ARCH
@@ -16,23 +16,24 @@ ENV HA_USER "root"
 ENV HA_GROUP "nogroup"
 ENV HA_USER_UID ""
 ENV DAEMON="bash /data/bliss/install/bin/bliss.sh"
-ENV DAEMON_OPTIONS=""
-ENV DAEMON_EXTRA_OPTIONS=""
-ENV DAEMON_APP_DIR="/config/bliss/application"
+ENV DAEMON_OPTIONS=" "
+ENV DAEMON_EXTRA_OPTIONS=" "
+ENV DAEMON_APP_DIR="/data/bliss/application"
 ENV DAEMON_INSTALL_DIR="/data/bliss/install"
 ENV DAEMON_SOFTWARE_URL=$url
 ENV DAEMON_SOFTWARE_DOWNLOAD_DIR="/data/bliss/download"
 ENV DAEMON_SOFTWARE_INSTALLER_COMMAND "java -jar"
 
 #Download to /tmp after testing.
-ENV HA_DIRS="/data/music /config/.java /data/bliss/download /config/bliss/application /data/bliss/install"
+ENV HA_DIRS="/data/music /config/.java /data/bliss/download /data/bliss/application /config/addons_config/bliss /data/bliss/install"
 ENV DEBUG=$debug
 #/config/bliss/java/.userPrefs/com/elsten/bliss/licence/prefs.xml
 
 COPY rootfs/ /
-# FIX For jdk install
 
+# FIX For jdk install
 RUN mkdir -p /usr/share/man/man1
+
 RUN apt-get update && \
 	apt-get -y install --no-install-recommends \
 		nfs-common \
@@ -64,22 +65,15 @@ RUN ln -s /config/.java /$(getent passwd ${HA_USER} | cut -d : -f 6)/.java
 #Cleanup
 RUN if [ -z "${debug}" -o "${debug}" = "false" ];then apt-get -y remove \
            git \
-           wget && \
+           && \
 	apt-get clean -y && \
 	apt-get -y autoremove && \
         rm -fr /sources ;fi
-
-#RUN rm -r /tmp && ln -s /tmpfs /tmp
-#ENV TEMP /tmpfs/
-#ENV TMP /tmpfs/
-#ENV TMPDIR /tmpfs/
-#ENV TEMPDIR /tmpfs/
 
 VOLUME /data
 VOLUME /share
 VOLUME /backup
 VOLUME /config
-#VOLUME /ssl
 
 # Build arguments
 ARG BUILD_DATE
