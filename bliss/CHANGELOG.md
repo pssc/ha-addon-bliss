@@ -1,3 +1,8 @@
+## [0.0.3] 2023-08-04
+
+### Changes
+ - Bump to debian base 7.1.0
+
 ## [0.0.2] 2023-06-28
 ### Added
 - Change log ;-)
