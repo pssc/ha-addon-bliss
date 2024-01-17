@@ -17,12 +17,14 @@ function stop() {
 
 function main() {
   echo "Starting ${NAME}"
+  cat /data/bliss/install/bin/bliss.sh
   ${DAEMON} ${DAEMON_OPTIONS} ${DAEMON_EXTRA_OPTIONS} &
   PID=$!
   echo -n "$PID" > /tmp/.${NAME}_ready
   trap "stop" SIGTERM SIGINT
   trap "" SIGHUP
 
+  echo "Wait ${PID}"
   wait "$PID"
   if [ "${DEBUG:-false}" = "true" ];then
     sleep 7d
