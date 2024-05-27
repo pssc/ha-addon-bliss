@@ -6,7 +6,6 @@
   "url": "https://github.com/pssc/ha-addon-bliss/",
   "webui": "http://[HOST]:[PORT:3220]/",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "startup": "application",
   "init": false,
   "boot": "auto",
   "ports": {
@@ -23,15 +22,11 @@
       "media:rw"
   ],
   "tmpfs": true,
-  "hassio_api": false,
   "udev":true,
   "full_access": true,
   "apparmor": false,
-  "homeassistant_api": false,
   "privileged": [ "SYS_ADMIN" ,"DAC_READ_SEARCH"],
-  "host_network": false,
   "backup_exclude": [ "/data/music", "/data/mount", "/data/mnt" ],
-  "ingress": false,
   "ingress_port": 0,
   "panel_icon": "mdi:music-book",
   "panel_title": "Bliss",
