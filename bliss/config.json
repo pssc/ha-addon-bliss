@@ -37,11 +37,11 @@
   "panel_title": "Bliss",
   "stage": "experimental",
   "options": {
-	  "links": [],
+          "links": [],
           "mounts": [],
           "dirs": [],
-	  "init_commands": [],
-	  "packages": []
+          "init_commands": [],
+          "packages": []
   },
   "schema": {
     "ssl": "bool?",
