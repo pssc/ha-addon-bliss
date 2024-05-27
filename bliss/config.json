@@ -7,7 +7,6 @@
   "webui": "http://[HOST]:[PORT:3220]/",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "init": false,
-  "boot": "auto",
   "ports": {
     "3220/tcp": 3220
   },
