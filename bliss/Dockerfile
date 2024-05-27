@@ -25,7 +25,7 @@ ENV DAEMON_SOFTWARE_URL=$url
 ENV DAEMON_SOFTWARE_DOWNLOAD_DIR="/data/bliss/download"
 ENV DAEMON_SOFTWARE_INSTALLER_COMMAND "java -jar"
 
-#Download to /tmp after testing.
+#Download to /tmp after testing..
 ENV HA_DIRS="/data/music /config/.java /data/bliss/download /data/bliss/application /config/addons_config/bliss /data/bliss/install"
 ENV DEBUG=$debug
 #/config/bliss/java/.userPrefs/com/elsten/bliss/licence/prefs.xml

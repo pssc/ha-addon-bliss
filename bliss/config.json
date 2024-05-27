@@ -9,7 +9,6 @@
   "startup": "application",
   "init": false,
   "boot": "auto",
-  "stdin": false,
   "ports": {
     "3220/tcp": 3220
   },
