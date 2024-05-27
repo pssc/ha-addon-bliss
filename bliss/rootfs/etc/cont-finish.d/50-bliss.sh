@@ -24,6 +24,12 @@ if [ -r /data/bliss/application/settings ];then
   rsync -art /data/bliss/application/settings ${CFG}/settings
 fi
 
+bashio::log.info "Bliss Tidy logs"
+rm -f /data/bliss/apllication/logs/bliss.log.*
+: > /data/bliss/apllication/logs/bliss.log
+
+# Todo tidy data and code..
+
 # on debug?
 bashio::log.info "Finish Bliss"
 touch ${CFG}/finish

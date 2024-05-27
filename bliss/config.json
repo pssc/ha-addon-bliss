@@ -1,6 +1,6 @@
 {
   "name": "Bliss(non-free) Unofficial installer",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "slug": "bliss",
   "description": "Installer for bliss into a HA addon, Bliss Makes your music library more browsable, searchable, playable and beautiful, whichever music players you use.",
   "url": "https://github.com/pssc/ha-addon-bliss/",
@@ -63,5 +63,6 @@
     "init_commands": ["str?"],
     "packages": ["str?"],
     "eula": "bool?"
-  }
+  },
+  "image": "ghcr.io/pssc/ha-addon-bliss-{arch}"
 }

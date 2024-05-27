@@ -1,3 +1,15 @@
+## [0.0.6] 2024-05-27
+ - Convert to rebuilt image that install bliss on demand.
+
+## [0.0.5] 2024-05-24
+### Change
+ - Tidy logs on shutdown / startup
+ - Bump to debian base 7.3.3
+
+### Todo
+ - Tidy code dir
+ - Tidy data dir
+
 ## [0.0.4] 2024-01-17
 ### Changes
  - Bump to debian base 7.3.1

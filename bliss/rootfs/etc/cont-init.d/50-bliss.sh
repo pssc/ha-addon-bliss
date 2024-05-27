@@ -49,3 +49,6 @@ else
    bashio::log.info "Skip user app/prefs"
 fi
 
+bashio::log.info "Bliss Tidy logs"
+rm -f /data/bliss/apllication/logs/bliss.log.* || true
+: > /data/bliss/apllication/logs/bliss.log || true
