@@ -1,3 +1,6 @@
+## [0.0.7] 2025-03-31
+ - Fix log trucation on shutdown
+
 ## [0.0.6] 2024-05-27
  - Convert to rebuilt image that install bliss on demand.
 
